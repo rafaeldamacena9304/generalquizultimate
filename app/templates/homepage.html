@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="welcome">
+    <img class="welcome__img" src="/static/welcome_img.svg">
+    <h1>Welcome to general quiz!</h1>
+    <p class="welcome__text">
+    In our quiz, you will be asked 10 general knowledge questions.
+    Make sure you watch all the videos carefully.
+    Condition: You must get all multiple choice answers correct.
+    </p>
+
+    <form class="start__form" method="POST" action="{{url_for('questions')}}">
+        <input type="hidden" value="">
+        <button type="submit" class="start__button">
+            Continue
+        </button>
+    </form>
+    {% endblock %}
+</div>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ title }}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+<main class="main">
+    <header class="nav__bar">
+        <img class="icon" src="/static/icon.svg"><span class="nav__title"> General Quiz</span>
+        <a class="nav__link {{'nav__link-current' if request.path == url_for('homepage') }}" href="{{ url_for('homepage') }}">
+            Homepage
+        </a>
+        <a class="nav__link {{'nav__link-current' if request.path == url_for('contact') }}" href="{{ url_for('contact') }}">
+            Contact
+        </a>
+        <a class="nav__link {{'nav__link-current' if request.path == url_for('login') }}" href="{{ url_for('login') }}">
+            Login
+        </a>
+
+    </header>
+</main>
+{% block content %}
+{% endblock %}
+</body>
+</html>

@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% block content %}
+<h1 class="login__h">Final Result</h1>
+<p class="login__p">
+You've achieved {{ qtd }}/10.
+    Remember: You must achieve all of the 10 questions for reward.
+    Your reward will pedinding for 24hrs
+</p>
+<form method="POST" action="{{url_for('results')}}">
+<input type="hidden" name="return_button">
+    <input type="hidden" name="logout_button">
+    <input type="hidden" name="return_button1">
+    <button class="login__button" type="submit">
+        Accept
+    </button>
+
+</form>
+{% endblock %}

@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="video__box">
+  <div class="video__question">
+    <video width="640" height="480" controls>
+      <source src="/static/videos/question_6.mp4" type="video/mp4">
+    </video>
+    </div>
+  </div>
+<div class="answer__box">
+  <form class="video__form" method="POST" action="{{url_for('answer6')}}">
+    <p class="answer__list">
+      <span class="span__button" >
+        <input type="hidden" name="question6a" id="question6" value="a">
+        <button type="submit" class="answer__button" >A</button>
+      </span>
+    </p>
+  </form>
+  <form class="video__form" method="POST" action="{{url_for('answer6')}}">
+      <p class="answer__list">
+        <span class="span__button" >
+          <input type="hidden" name="question6b" id="question6b" value="b">
+          <button type="submit" class="answer__button" >B</button>
+        </span>
+      </p>
+  </form>
+  <form class="video__form" method="POST" action="{{url_for('answer6')}}">
+    <p class="answer__list">
+      <span class="span__button" >
+            <input type="hidden" name="question6c" id="question6c" value="c">
+        <button type="submit" class="answer__button" >C</button>
+      </span>
+    </p>
+  </form>
+  <form class="video__form" method="POST" action="{{url_for('answer6')}}">
+      <p class="answer__list">
+        <span class="span__button" >
+          <input type="hidden" name="question6d" id="question6d" value="d">
+        <button type="submit" class="answer__button" >D</button>
+        </span>
+    </p>
+  </form>
+</div>
+{% endblock %}
