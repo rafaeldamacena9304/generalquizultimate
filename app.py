@@ -10,7 +10,7 @@ load_dotenv()
 app = Flask(__name__)
 
 app.secret_key = 'sae5f4a56we5r4f$$#@!!!g5s4ae5r42/xz12*@!(#)13505435t5e4698+4f5w95+-d4154r5tgs54er524435t45596e4gf5'
-client = MongoClient(os.getenv(MONGODB_URI))
+client = MongoClient(os.getenv("MONGODB_URI"))
 app.db = client.generaldb
 resultados = []
 def question_id():
